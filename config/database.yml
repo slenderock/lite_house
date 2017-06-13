@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: password
+development:
+  <<: *default
+  database: litehouse_development
+test:
+  <<: *default
+  database: litehouse_test
+production:
+  <<: *default
+  database: litehouse_production
+  username: litehouse
+  password: <%= ENV['LITEHOUSE_DATABASE_PASSWORD'] %>
