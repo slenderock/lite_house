@@ -10,8 +10,7 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand[href="#"]
-            | Litehouse
+          = link_to 'Litehouse', root_url, class: 'navbar-brand'
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li.active
@@ -33,7 +32,7 @@ html
               | Submit
           ul.nav.navbar-nav.navbar-right
             li
-              a[href="#"]
+              =link_to destroy_user_session_path, method: :delete
                 | Sign Out
     title
       | Litehouse
