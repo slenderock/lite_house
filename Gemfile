@@ -20,11 +20,13 @@ group :development, :test do
 end
 
 group :development do
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
+  gem 'capistrano',         '3.6.1', require: false
+  gem 'capistrano-rvm',     '0.1.2', require: false
+  gem 'capistrano-rails',   '1.2.0', require: false
+  gem 'capistrano-bundler', '1.2.0', require: false
+  gem 'capistrano3-puma',   '1.2.1', require: false
+  gem 'capistrano-rake',    '0.1.0', require: false
+
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
