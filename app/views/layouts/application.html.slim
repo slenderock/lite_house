@@ -1,6 +1,11 @@
 doctype html
 html
   head
+    title Litehouse
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => :reload
+    = javascript_include_tag 'application', 'data-turbolinks-track' => :reload
+  body
     nav.navbar.navbar-default
       .container-fluid
         .navbar-header
@@ -13,33 +18,17 @@ html
           = link_to 'Litehouse', root_url, class: 'navbar-brand'
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.active
-              a[href="#"]
-                | Link
-                span.sr-only
-                  | (current)
             li
-              a[href="#"]
+              = link_to '#'
                 | Link
-            li.dropdown
-              a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
-                | Dropdown
-                span.caret
-          form.navbar-form.navbar-left
-            .form-group
-              input.form-control[type="text" placeholder="Search"]
-            button.btn.btn-default[type="submit"]
-              | Submit
           ul.nav.navbar-nav.navbar-right
             li
-              =link_to destroy_user_session_path, method: :delete
-                | Sign Out
-    title
-      | Litehouse
-    = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  body
+            - if current_user
+              li = link_to "Welcome #{current_user.email}", '#'
+              li = link_to 'Sign Out', destroy_user_session_path, method: :delete
+            - else
+              li = link_to 'Sign In', new_user_session_url
+              li = link_to 'Sign Up', new_user_registration_url
     p.notice
       = notice
     p.alert
