@@ -1,0 +1,11 @@
+= link_to edit_lite_house_path(@lite_house), class: 'btn btn-warning btn-xs'
+  | Edit
+dl.dl-horizontal
+  dt Name :
+  dd = @lite_house.name.humanize
+  - if @lite_house.custom_fields.present?
+    - @lite_house.custom_fields.each do |k, v|
+      dt
+        = k.humanize rescue k
+        |  :
+      dd = v.humanize rescue v

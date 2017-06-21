@@ -1,0 +1,4 @@
+tr
+  td = link_to lite_house.name, lite_house
+  td = link_to 'Edit', edit_lite_house_path(lite_house)
+  td = link_to 'Destroy', lite_house, data: {confirm: 'Are you sure?'}, method: :delete

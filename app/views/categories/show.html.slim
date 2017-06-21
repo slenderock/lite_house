@@ -1,6 +1,1 @@
-
-p
-  strong Name:
-  = @category.name
-
-= link_to 'Back', categories_path
+== render 'shared/lite_houses_table', objects_scope: @category.lite_houses

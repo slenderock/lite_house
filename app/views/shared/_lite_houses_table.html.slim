@@ -1,0 +1,12 @@
+h1.text-center.text-capitalize Listing litehouses
+
+table
+  thead
+    tr
+      th Name
+      th
+      th
+  tbody
+    == render objects_scope
+
+= link_to 'New Lite house', new_lite_house_path, class: 'btn btn-info btn-sm'
