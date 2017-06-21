@@ -19,6 +19,7 @@ gem 'turbolinks', '~> 5'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 gem 'uglifier', '>= 1.3.0'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
