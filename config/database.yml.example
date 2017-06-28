@@ -14,4 +14,3 @@ production:
   <<: *default
   database: litehouse_production
   username: litehouse
-  password: <%= ENV['LITEHOUSE_DATABASE_PASSWORD'] %>

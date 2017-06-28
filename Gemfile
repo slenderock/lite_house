@@ -8,6 +8,7 @@ end
 
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
+gem 'dotenv-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'less-rails'
 gem 'pg', '~> 0.18'

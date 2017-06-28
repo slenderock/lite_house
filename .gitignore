@@ -15,6 +15,7 @@
 .idea/
 
 /config/database.yml
+.env
 
 /node_modules
 /yarn-error.log
