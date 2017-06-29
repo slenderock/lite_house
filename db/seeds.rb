@@ -1,3 +1,10 @@
+unless Rails.env.production?
+  Rails.application.eager_load!
+  ApplicationRecord.descendants.each(&:destroy_all)
+
+  puts 'Всі дані з бази було щойно видалено'
+end
+
 [
   'Travel',
   'Co-Working',
